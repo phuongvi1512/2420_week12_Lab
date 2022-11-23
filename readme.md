@@ -27,8 +27,44 @@ Before following the below instruction, please make sure to complete all setup s
     * If using index.html file in the repo, run command: git clone https://github.com/phuongvi1512/2420_week12_Lab.git to download the repo
 
 3. To write nginx server block file, use the sample server-block-file in the repo
-    * **Note**: change the domain to your remote server IP address
+    **Note**: change the domain to your remote server IP address
     ![server block file](/images/nginx-block-server-file.png) 
+
+4. To upload file from local host (wsl) to server, use command sftp
+    1. To connect to remote server, run command: sftp username@remote-server-IP-address
+    2. To upload folder you downloaded from the repo, in sftp, run command: put -r folder-name
+    3. Move files to approriate directories:
+        * Move index.html file into /var/www/IP-address/html/ dir
+            > command: sudo mv index.html /var/www/IP-address/html/
+            ![image here]
+            **Note**: You may need to create folder /var/www/IP-address/hmtl and change ownership and permission
+            > sudo mkdir -p /var/www/IP-address/html
+            > sudo chown -R $USER:$USER /var/www/IP-address
+            > sudo chmod -R 755 /var/www/IP-address
+            ![command to make www dir](/images/command-setup-server-block.png)
+
+        * To create directive for server block file, move server-block-file to /etc/nginx/sites-available and rename the file to the domain or IP address
+            > command: sudo mv server-block-file /etc/nginx/sites/available/IP-address
+
+        * Create symbolic link using command: 
+            > command: sudo ln -s /etc/nginx/sites-available/IP-address /etc/nginx/sites-enabled
+
+        * Test the configuration using command
+            > sudo nginx -t
+
+5. To restart nginx service, use command: sudo systemctl restart nginx
+    To check if the command works, run command: systemctl status nginx. It should show active and running
+    ![command to check status](/images/nginx-check-conf-file.png)
+
+6. To check if the server IP address is served, in your choice's web browser (google chrome, firefox, etc), type: http://IP-address and press Enter
+
+7. Set up cloud firewall in Digital Ocean
+    ![set up firewall 1](/images/firewall-create.png)
+    ![set up firewall 1](/images/firewall-add.png)
+    ![set up firewall 1](/images/firewall-name-inbound-rules.png)
+    ![set up firewall 1](/images/firewall-add-tag.png)
+    ![set up firewall 1](/images/firewall-created.png)
  
+8. Check if the server IP address works after activation cloud firewall
 
 
