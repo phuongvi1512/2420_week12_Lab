@@ -16,7 +16,7 @@ In this git repo, we will show how to set up a server to host an index.html file
 Before following the below instruction, please make sure to complete all setup steps
 
 
-1. Install NGINX
+1. Install NGINX on your Server
     1. To make sure all packages up-to-date, run command: sudo apt update && sudo apt upgrade
     2. To install nginx, run command: sudo install nginx
     3. Type "Y" in confirmation questions
@@ -26,11 +26,11 @@ Before following the below instruction, please make sure to complete all setup s
 2. Create an index.html or use the index.html from the repo.
     * If using index.html file in the repo, run command: git clone https://github.com/phuongvi1512/2420_week12_Lab.git to download the repo
 
-3. To write nginx server block file, use the sample server-block-file in the repo
-    **Note**: change the domain to your remote server IP address
+3. To write a nginx server block file, use the sample server-block-file in the repo
+    **Note**: change the domain to your remote server IP address from DigitalOCean
     ![server block file](/images/nginx-block-server-file.png) 
 
-4. To upload file from local host (wsl) to server, use command sftp
+4. To upload the file from your local host (wsl) to server, use command sftp
     1. To connect to remote server, run command: sftp username@remote-server-IP-address
     2. To upload folder you downloaded from the repo, in sftp, run command: put -r folder-name
     3. Move files to approriate directories:
