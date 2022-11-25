@@ -51,10 +51,11 @@ Before following the below instruction, please make sure to complete all setup s
 
         * Test the configuration using command
             > sudo nginx -t
+            ![command to test configuration](/images/nginx-check-conf-file.png)
 
 5. To restart nginx service, use command: sudo systemctl restart nginx
     To check if the command works, run command: systemctl status nginx. It should show active and running
-    ![command to check status](/images/nginx-check-conf-file.png)
+    
 
 6. To check if the server IP address is served, in your choice's web browser (google chrome, firefox, etc), type: http://IP-address and press Enter
 
