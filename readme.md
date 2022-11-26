@@ -59,6 +59,8 @@ Before following the below instruction, please make sure to complete all setup s
 
 6. To check if the server IP address is served, in your choice's web browser (google chrome, firefox, etc), type: http://IP-address and press Enter
 
+![web page image](/images/web-page.png)
+
 7. Set up cloud firewall in Digital Ocean
     1. Sign in and go to your projects page, in left drop down menu, click on **Networking** and then choose **Firewall** and click **Create Firewall**
     ![set up firewall 1](/images/firewall-create.png)
