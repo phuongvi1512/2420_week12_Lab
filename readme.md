@@ -36,7 +36,7 @@ Before following the below instruction, please make sure to complete all setup s
     3. Move files to approriate directories:
         * Move index.html file into /var/www/IP-address/html/ dir
             > command: sudo mv index.html /var/www/IP-address/html/
-            ![image here]
+            
             **Note**: You may need to create folder /var/www/IP-address/hmtl and change ownership and permission
             > sudo mkdir -p /var/www/IP-address/html
             > sudo chown -R $USER:$USER /var/www/IP-address
