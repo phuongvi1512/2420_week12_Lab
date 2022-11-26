@@ -1,5 +1,9 @@
 ## Set Up NGINX
 
+# Authors
+* Phuong Vi Dang
+* Hened Medina
+
 # Description
 In this git repo, we will show how to set up a server to host an index.html file through WSL and remote server and create a cloud firewall
 
