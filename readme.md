@@ -69,14 +69,17 @@ Before following the below instruction, please make sure to complete all setup s
     ![set up firewall 1](/images/firewall-add.png)
     * Note: in the below image, since only **SSH** and **HTTP** are added in inbound rules, the remote server is only connected through **SSH** and **HTTP** protocols
     * If you want the remote server to be connected through certain protocols, edit the inbound rules
+
     ![set up firewall 1](/images/firewall-name-inbound-rules.png)
 
 
 
-    3. In **Apply to Droplets**, add <ins>tag<ins>
-    * Note: The <ins>tag<ins> must be matching with the tag of the droplets you want to put firewall
+
+    3. In **Apply to Droplets**, add <ins>tag</ins>
+    * Note: The <ins>tag</ins> must be matching with the tag of the droplets you want to put firewall
     ![set up firewall 1](/images/firewall-add-tag.png)
     ![droplet tag](/images/droplet-create.png)
+
 
 
 
